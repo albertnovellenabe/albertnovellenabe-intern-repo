@@ -13,10 +13,6 @@
 ### Staying Consistent
 * **The Plan:** Since I get "in the zone" and forget time exists, I'll use **Focus Bear** to force me to take a 2-minute movement break every hour. No excuses.
 
----
-
-## ask Documentation
-
 ### 1. Setup Adjustments
 * Raised the laptop so I'm looking straight ahead, not down.
 * Cleared off my desk space so my mouse arm isn't cramped against the edge.

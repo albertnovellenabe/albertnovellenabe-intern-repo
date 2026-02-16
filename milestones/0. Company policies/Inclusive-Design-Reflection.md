@@ -11,10 +11,6 @@ A major pitfall is "feature creep"—adding too many bells and whistles that end
 ### One Practical Change
 I will prioritize "Dark Mode" and high-contrast accessibility in the UI components I build. I'll also ensure that any real-time alerts I code (like in the monitoring app) are meaningful and don't fire off unnecessary notifications that contribute to noise.
 
----
-
-## ask Documentation
-
 ### 1. Research Insight
 I looked into how people with ADHD interact with productivity apps. A common complaint is "notification fatigue." Users often end up deleting apps that nag them too much because the stress of the notification outweighs the benefit of the tool.
 
@@ -26,7 +22,3 @@ I looked into how people with ADHD interact with productivity apps. A common com
 **Scenario:** A user is frustrated because they keep "breaking" their focus habit and feels like the app is failing them.
 **My Response:** "I hear how frustrating it is when you can't get into the flow you planned. Please know that the app is a tool to support you, not a judge of your productivity. If the current settings feel too restrictive, we can look at adjusting your 'block' levels to be a bit more flexible while you build up your routine. You haven't failed; you're just adjusting the system to fit your brain better."
 
----
-
-## Verification
-I have reflected on the ethical implications of my work and commit to building features that empower users without exploiting their attention or causing unnecessary stress.

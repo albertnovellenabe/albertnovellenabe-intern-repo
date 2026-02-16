@@ -1,7 +1,5 @@
 # Data Privacy & My Role at Focus Bear
 
-## 📝 Reflection
-
 ### My Daily Security Checklist
 * **Environment Variables:** I'm making it a hard rule to check my `.gitignore` before every single push. No API keys or DB credentials should ever see the light of a remote repo.
 * **Locked Screen:** If I'm working in a cafe or a library, I'm hitting `Win+L` (or `Cmd+Ctrl+Q`) every time I stand up to grab a coffee. Physical security is data security.
@@ -13,10 +11,6 @@
 ### Common Pitfalls to Avoid
 * **"It's just a test":** Using real user data in a staging/dev environment. It's a huge risk. I'll stick to generated "fake" data for testing my real-time monitoring features.
 * **Shadow IT:** Using random third-party "JSON formatters" or "Base64 decoders" online. Those sites can log whatever you paste. I'll use local IDE plugins instead.
-
----
-
-## ask Documentation
 
 ### 1. The New Security Habit
 * **Habit:** Multi-Factor Authentication (MFA) on everything. If an account holds Focus Bear data and it doesn't have 2FA enabled, I'm fixing that today.

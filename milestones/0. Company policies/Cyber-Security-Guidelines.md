@@ -14,10 +14,6 @@ If I ever see a "new login" notification I don't recognize or accidentally click
 2. **Report:** Alert the Focus Bear team/supervisor. Don't wait to "be sure"—speed matters.
 3. **Rotate:** Change credentials from a known clean device.
 
----
-
-## ask Documentation
-
 ### 1. Account Hardening
 * **Password Manager:** I’ve moved my Focus Bear and University credentials into an encrypted vault.
 * **2FA Setup:** I have enabled 2FA on my GitHub, Gmail, and Discord accounts using an authenticator app.
@@ -29,8 +25,3 @@ If I ever see a "new login" notification I don't recognize or accidentally click
 ### 3. My New Security Habit
 **"The Script-Check Rule"**
 Before running any `npm install` or `pip install` from a new or obscure library, I will do a quick check on the package's reputation. Supply chain attacks (malicious code hidden in common libraries) are a major threat to developers, and I want to ensure I'm not importing a "Trojan horse" into Focus Bear's codebase.
-
----
-
-## 📄 Verification
-I understand that as a developer with access to databases and source code, I am a high-value target for social engineering and cyber attacks. I commit to being the strongest link in our security chain.

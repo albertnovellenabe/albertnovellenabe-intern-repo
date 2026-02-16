@@ -9,11 +9,8 @@ I use AI for "low-stakes" tasks: writing boilerplate, generating unit tests for 
 To keep my skills sharp, I try to solve a problem for at least 15 minutes before asking an AI. This ensures I’m actually learning and not just "copy-pasting" my way through the internship. I treat AI output like a draft from a junior developer: it always needs a thorough peer review.
 
 ### Privacy First
-Before I paste anything into an LLM, I do a "sanitization pass." I replace project-specific names with generic ones (e.g., changing "FocusBearInternalAPI" to "myAPI") and I never include real database strings or secrets.
+Before I paste anything into an LLM, I do a "sanitization pass." I replace project-specific names with generic ones and I never include real database strings or secrets.
 
----
-
-## ask Documentation
 
 ### 1. Task Improvement Test
 * **Task:** Writing a complex GraphQL schema for the real-time monitoring project.
@@ -26,8 +23,3 @@ The AI-generated code was about 80% correct. The 20% it got wrong would have cau
 ### 3. My Best Practice for Focus Bear
 **"The Sanitization Rule"**
 I will never paste more than 20 lines of code at a time into an AI tool, and I will strictly scrub all variable names that hint at internal Focus Bear infrastructure. If I'm using AI to help with a bug, I will recreate the bug in a generic "sandbox" environment first so no proprietary code is uploaded.
-
----
-
-## 📄 Verification
-I understand that I am ultimately responsible for every line of code I push, regardless of whether it was assisted by AI. I commit to maintaining Focus Bear’s security and my own growth as a developer.
