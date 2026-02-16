@@ -1,7 +1,5 @@
 # Competitive Landscape: Focus Bear vs. The World
 
-## Reflection
-
 ### What makes Focus Bear different?
 Focus Bear is a "hybrid" that combines the best of both worlds. While **Freedom** just blocks sites and **Routinery** just tracks habits, Focus Bear does both. It doesn't just remind me to meditate; it actually locks my screen and *guides* me through the meditation while blocking the rest of the world out. It’s much more "hands-on" than the others.
 
@@ -14,10 +12,3 @@ If I were a user, I'd choose Focus Bear because it reduces **decision fatigue**.
 
 ### One improvement Focus Bear could make
 Based on my research, Focus Bear could improve its **visual aesthetics and flexibility**. **Tiimo** won "App of the Year" because it is beautiful and non-judgmental. Sometimes Focus Bear can feel a bit "strict" or "technical." Making the UI more customizable with icons or "pops of joy" like Tiimo might make it more welcoming for neurodivergent users.
-
----
-
-## ask Documentation
-* **Research Date:** February 16, 2026
-* **Apps Evaluated:** Freedom, Cold Turkey, Tiimo, Routinery.
-* **Key Finding:** Most apps are either "Blockers" or "Planners." Focus Bear is unique because it is an "Enforcer" that bridges the gap between the two.

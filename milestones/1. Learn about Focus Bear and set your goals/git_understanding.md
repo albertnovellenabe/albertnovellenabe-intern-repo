@@ -15,7 +15,7 @@ I used my Git desktop client to compare the two versions. I realized that the ve
 
 ---
 
-## est Practices for Focus Bear
+## Best Practices for Focus Bear
 1. **Keep PRs Small:** Small pull requests mean fewer chances for conflicts.
 2. **Atomic Commits:** I'll commit small, logical chunks of work. If a conflict happens, it’s much easier to see *what* logic is actually clashing.
 3. **Daily Syncs:** By keeping my local repo synced with the remote `main`, I catch conflicts early.
