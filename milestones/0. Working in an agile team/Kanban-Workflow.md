@@ -8,10 +8,6 @@ Kanban is a reality check. When I see five cards in my "In Progress" column, I r
 ### Improving My Workflow
 I plan to apply the "Pull System." Instead of a supervisor pushing tasks on me, I’ll pull the highest-priority item from the To-Do column whenever I have a free block of time between my USC classes. This keeps me proactive without feeling overwhelmed.
 
----
-
-## ask Documentation
-
 ### 1. Repo Kanban Setup
 I have set up a Kanban board in my GitHub/Jira repo with the following columns:
 * **Backlog:** Future features (e.g., "Add MQTT support").
@@ -27,8 +23,3 @@ I have set up a Kanban board in my GitHub/Jira repo with the following columns:
 ### 3. Improving Task Tracking
 **The Change:** I will start adding "Blocker" labels to cards with a brief note on *why* they are stuck.
 **The Goal:** If I'm waiting on a library update or a supervisor's approval, the board will show exactly what we're waiting for. This prevents tasks from just "sitting" in In Progress without any explanation.
-
----
-
-## Verification
-I commit to keeping my Kanban board updated as a single source of truth for
