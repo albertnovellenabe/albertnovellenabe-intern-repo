@@ -96,9 +96,45 @@ A good commit message follows the **50/72 rule**: a concise subject line (under 
 What surprised me most was `git blame`. In a professional setting, it’s not for "blaming"—it’s for finding who to talk to about a specific feature. I also found `cherry-pick` extremely useful; I used it to grab commit `ca49c37` from my `hotfix-branch` and apply it directly to `main`. This keeps the production history clean and focused by only merging what is truly ready.
 
 ![CL 1](git_understanding_3_4_cl1.png)
-### Section 3.1: Staging vs Committing
 
 
+# 3.5 Branching & Team Collaboration
+
+### Why is pushing directly to main problematic?
+Pushing directly to `main` is risky because it bypasses the "quality control" phase. If I introduce a syntax error or a logical bug in the database connection, I break the project for the entire team. It also makes it impossible to work on multiple features at once without the code becoming a tangled mess.
+
+### How do branches help with reviewing code?
+Branches allow for isolated development. When I submit a Pull Request from my branch, my teammates can see exactly which files I changed and leave comments on specific lines. This ensures that only high-quality, tested code is merged into the master project.
+
+### What happens if two people edit the same file on different branches?
+Git is smart enough to handle this most of the time. If we edited different parts of the file, Git will automatically combine them when we merge. However, if we both edited the exact same line, Git will trigger a **Merge Conflict**, requiring us to manually decide which version of the code should stay.
+
+## My Workflow Habit
+From now on, I will follow the "Feature Branch" workflow:
+1. `git checkout -b feature/name-of-task`
+2. Code, test, and commit locally.
+3. Push the branch and open a Pull Request.
+4. Only merge to `main` once the tests pass and a peer has approved it.
+
+![CL 1](git_understanding_3_5_cl1.png)
 
 
+# 3.6. Git concept: staging vs committing
+
+### 1. What is the difference between staging and committing?
+- **Staging (`git add`):** This is the act of preparing your changes. It tells Git exactly which modified files you want to include in your next "snapshot." It’s like a draft or a preparation area.
+- **Committing (`git commit`):** This is the act of permanently saving that snapshot to your project's history. Once committed, the changes are "recorded" and can be revisited later.
+
+### 2. Why does Git separate these two steps?
+Git separates these steps to give developers **granular control**. If you've worked on three different features in five different files, you can stage them separately and create three distinct, clean commits rather than one giant, messy one.
+
+### 3. When would you want to stage changes without committing?
+You would stage without committing when:
+- You have finished one part of a task but aren't ready to save the whole project yet.
+- You want to "group" related changes together while leaving unrelated experimental code out of the commit.
+- You want to use `git diff --cached` to double-check exactly what is about to be saved before finalizing the message.
+
+
+![CL 1](git_understanding_3_6_cl1.png)
+![CL 1](git_understanding_3_6_proof.png)
 
