@@ -31,3 +31,7 @@ Poor messages like "save" or "fixed" create a "dark" history. If a bug is discov
 Update on git rules
 Added a newline for better spacing
 Finalizing git research
+
+![Meaningful Commits](git_understanding_3_2_proof.png)
+
+![CL](git_understanding_3_2_cl.png)
