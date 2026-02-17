@@ -30,3 +30,4 @@ Clear messages serve as a "logbook" for the team. When a developer runs `git bla
 Poor messages like "save" or "fixed" create a "dark" history. If a bug is discovered six months later, it becomes nearly impossible to use `git bisect` or `git log` to find when or why the error was introduced. It forces developers to waste time reading through every line of a diff to reverse-engineer the thought process of the original author.
 Update on git rules
 Added a newline for better spacing
+Finalizing git research
