@@ -96,3 +96,9 @@ A good commit message follows the **50/72 rule**: a concise subject line (under 
 What surprised me most was `git blame`. In a professional setting, it’s not for "blaming"—it’s for finding who to talk to about a specific feature. I also found `cherry-pick` extremely useful; I used it to grab commit `ca49c37` from my `hotfix-branch` and apply it directly to `main`. This keeps the production history clean and focused by only merging what is truly ready.
 
 ![CL 1](git_understanding_3_4_cl1.png)
+### Section 3.1: Staging vs Committing
+
+
+
+
+
