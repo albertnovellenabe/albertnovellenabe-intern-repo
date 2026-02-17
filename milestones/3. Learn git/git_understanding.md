@@ -12,3 +12,7 @@ A high-quality PR should include:
 
 ### 3. What did you learn from reviewing an open-source PR?
 While reviewing public repositories (like React or VS Code), I observed that maintainers prioritize clarity and consistency. The most effective reviewers use constructive language, often framing suggestions as questions rather than demands. I also noticed that automated CI/CD checks (like linting and unit tests) are the first line of defense, allowing human reviewers to focus on the high-level logic and architecture.
+
+![New Branch](git_understanding_proof.png)
+
+![CL](git_understanding_cl.png)
