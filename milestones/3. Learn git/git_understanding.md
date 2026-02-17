@@ -62,3 +62,37 @@ During my test scenario, I identified the commit `ad0cfd1` (feat: add analytics 
 ![CL 2](git_understanding_3_3_cl2.png)
 
 ![CL 3](git_understanding_3_3_cl3.png)
+
+
+# 3.4 Advanced Git Commands & When to Use Them
+
+### 1. The Importance of Pull Requests (PRs)
+Pull Requests (PRs) act as a "quality gate" for software projects. They allow team members to review changes, run automated tests, and discuss implementation details before code is merged into the stable `main` branch. This process facilitates knowledge sharing, catches bugs early, and ensures that the codebase maintains a high standard of quality.
+
+### 2. Commit Message Best Practices
+A good commit message follows the **50/72 rule**: a concise subject line (under 50 characters) and a detailed body (wrapped at 72 characters) if necessary. It should use the **imperative mood** (e.g., "Fix bug" instead of "Fixed bug").
+
+* **How it helps collaboration:** Clear messages serve as a logbook, explaining the *intent* behind a change so future developers don't have to guess.
+* **Risks of poor messages:** Vague messages like "fixed stuff" or "save" create a "dark" history, making it nearly impossible to troubleshoot or reverse-engineer logic months later.
+
+### 3. Debugging with Git Bisect
+`git bisect` is a powerful debugging tool that uses a binary search to find the exact commit that introduced a bug. By marking one commit as 'good' and another as 'bad', Git splits the history in half repeatedly until the culprit is found.
+
+* **Real-world use:** Essential when a regression occurs in a large project. It allows a developer to find an error in ~5 steps even if there are dozens of commits to check.
+* **Manual vs. Bisect:** Manual review is slow and subjective. `git bisect` is fast, mathematical, and highly efficient for complex bugs.
+
+**Test Results:** During my experiment, I identified commit `ad0cfd1` (feat: add analytics module) as the first bad commit. It successfully located the `ZeroDivisionError` introduced for the test.
+
+### 4. Advanced Git Commands Reference
+
+| Command | What it does | Real-World Use Case |
+| :--- | :--- | :--- |
+| `git checkout main -- <file>` | Restores a specific file to its state on the main branch. | Perfect for when you've experimented too much on a file and want to "reset" just that one file. |
+| `git cherry-pick <hash>` | Applies one specific commit from another branch to your current branch. | Essential when a bug fix is ready on a dev branch, but the rest of the features aren't ready to merge yet. |
+| `git log` | Shows the chronological history of commits. | Used to understand how a project evolved or to find a specific point in time to revert to. |
+| `git blame <file>` | Shows the last person to modify each line of a file. | A key communication tool; helps find the person with the most context on a specific piece of code. |
+
+### 5. Reflection on Advanced Commands
+What surprised me most was `git blame`. In a professional setting, it’s not for "blaming"—it’s for finding who to talk to about a specific feature. I also found `cherry-pick` extremely useful; I used it to grab commit `ca49c37` from my `hotfix-branch` and apply it directly to `main`. This keeps the production history clean and focused by only merging what is truly ready.
+
+![CL 1](git_understanding_3_4_cl1.png)

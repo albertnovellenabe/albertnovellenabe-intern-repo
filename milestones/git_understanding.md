@@ -1,1 +1,0 @@
-Update on git rules
