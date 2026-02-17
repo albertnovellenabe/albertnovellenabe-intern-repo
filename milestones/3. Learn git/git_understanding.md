@@ -96,3 +96,17 @@ A good commit message follows the **50/72 rule**: a concise subject line (under 
 What surprised me most was `git blame`. In a professional setting, it’s not for "blaming"—it’s for finding who to talk to about a specific feature. I also found `cherry-pick` extremely useful; I used it to grab commit `ca49c37` from my `hotfix-branch` and apply it directly to `main`. This keeps the production history clean and focused by only merging what is truly ready.
 
 ![CL 1](git_understanding_3_4_cl1.png)
+
+
+# 3.5 Branching & Team Collaboration
+
+### 1. Why is pushing directly to main problematic?
+Pushing directly to `main` is risky because it can introduce broken code or "bugs" into the production-ready version of the software. If a developer pushes a change that crashes the app, everyone else on the team who pulls from `main` will also have a broken environment, halting productivity across the whole company.
+
+### 2. How do branches help with reviewing code?
+Branches create a sandbox where code can be tested and reviewed in isolation. By using branches, a developer can submit a Pull Request (PR), allowing teammates to comment on specific lines of code, suggest improvements, and ensure quality standards are met before the changes are ever integrated into the primary codebase.
+
+### 3. What happens if two people edit the same file on different branches?
+When those two branches are eventually merged into `main`, Git will encounter a **Merge Conflict**. Git will pause the merge and ask the developer to manually choose which version of the code to keep (or how to combine them). This ensures that no one's work is accidentally overwritten without a human double-checking the logic.
+
+![CL 1](git_understanding_3_5_cl1.png)
