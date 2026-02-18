@@ -1,3 +1,5 @@
+# stuff happened here
+
 1. What do you hope to learn from this internship?
 I want to experience the full lifecycle of a professional software product. Specifically, I’m eager to see how a remote team bridges the gap between high-level business goals (Entrepreneurship) and technical implementation. I hope to learn how Focus Bear maintains its codebase to support neurodivergent users, ensuring that every update is stable and truly helpful for executive function.
 
