@@ -1,4 +1,4 @@
-#### The code samples were tested with Kotlin
+#### The code samples were tested with Kotlin from my personal project
 
 # 4.1 Understanding Clean Code Principles
 
@@ -41,7 +41,7 @@ Refactoring shifted the code from "How the computer sees it" to "How a human exp
 ![CODE_1](clean_code_4_2_unclear_code.png)
 
 ### Clean Code
-![CODE_2](clean_code_4_1_clear_code.png)
+![CODE_2](clean_code_4_2_clear_code.png)
 
 
 # 4.3 Writing Small, Focused Functions
@@ -127,5 +127,36 @@ Refactoring improved the code by **reducing cognitive load**. By using Guard Cla
 ![CODE_2](clean_code_4_7_simplified_version.png)
 
 
+# 4.9 Writing Unit Tests for Clean Code
+
+### 1. How do unit tests help keep code clean?
+Unit tests act as a "Clean Code Enforcer." To make a function testable, it **must** be small, focused, and free of hidden side effects (like reaching out to a real database). If I find a function impossible to test, it’s a "Code Smell" telling me I need to break it down into smaller, simpler pieces.
+
+### 2. What issues did you find while testing?
+While writing tests, I realized that "Edge Cases" are easy to overlook. For example, I initially didn't think about what happens if a user inputs a negative number. Writing the test forced me to add a **Guard Clause** to handle that unexpected input, making the function more robust.
+
+### Function Code
+![CODE_1](clean_code_4_9_function.png)
+
+### Unit Test
+![CODE_2](clean_code_4_9_unit_test.png)
+
+# 4.10 Code Formatting & Style Guides
+
+### 1. Why is code formatting important?
+Code formatting is important because it creates **consistency**. In a professional team, having a shared style guide (like Airbnb's) prevents "style wars" and ensures that version control diffs are clean. It allows developers to focus on solving problems rather than arguing about where a bracket should go.
+
+### 2. What issues did the linter detect?
+When I ran ESLint, it detected several issues:
+- **Unused Variables:** Variables that were declared but never used (Code Smell!).
+- **Missing Semicolons:** Inconsistent line endings.
+- **Single vs Double Quotes:** Mixing different string formats.
+- **Trailing Commas:** Missing commas at the end of objects, which makes Git diffs messier.
+
+### 3. Did formatting the code make it easier to read?
+Yes, significantly. Prettier standardized the indentation and line length across all my Express.js files. The code now looks much more organized, and it’s easier to spot logic errors because the visual "clutter" of inconsistent spacing has been removed.
+
+### Prettier
+![LOGO](clean_code_4_10_formatter.png)
 
 
