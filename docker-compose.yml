@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:16 # Use a specific version to match production
+    container_name: focusbear-db
+    restart: always
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: mysecurepassword
+      POSTGRES_DB: focusbear_dev
+    ports:
+      - "5432:5432" 
+    volumes:
+      - pgdata:/var/lib/postgresql/data # This is where the magic (persistence) happens
+
+volumes:
+  pgdata: # Declares the named volume
