@@ -1,6 +1,22 @@
-version: '3.8'
+version: "3.8"
 
 services:
+  api: # <-- ADDED: The NestJS Application
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: focusbear-api
+    ports:
+      - "3000:3000"
+    environment:
+      # Notice how the host is 'db' (the name of the Postgres service below)
+      DATABASE_URL: postgres://admin:mysecurepassword@db:5432/focusbear_dev
+    volumes:
+      - .:/usr/src/app # Syncs your local code for hot-reloading
+      - /usr/src/app/node_modules # Prevents local node_modules from overwriting the container's
+    depends_on:
+      - db # Ensures the database starts before the API
+
   db:
     image: postgres:16 # Use a specific version to match production
     container_name: focusbear-db
@@ -10,7 +26,7 @@ services:
       POSTGRES_PASSWORD: mysecurepassword
       POSTGRES_DB: focusbear_dev
     ports:
-      - "5432:5432" 
+      - "5432:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data # This is where the magic (persistence) happens
 
