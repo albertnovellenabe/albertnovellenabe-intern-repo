@@ -9,6 +9,7 @@ import {
 } from '@nestjs/common';
 
 import { HabitsService, type Habit } from './habits.service';
+import { CreateHabitDto } from './dto/create-habit.dto';
 
 @Controller('habits')
 export class HabitsController {
@@ -24,9 +25,15 @@ export class HabitsController {
     return this.habitsService.findOne(id);
   }
 
+  /*
   @Post()
   createHabit(@Body('name') name: string): Habit {
     return this.habitsService.create(name);
+  }*/
+
+  @Post()
+  createHabit(@Body() CreateHabitDto: CreateHabitDto) {
+    return this.habitsService.create(CreateHabitDto.name);
   }
 
   @Put(':id')
