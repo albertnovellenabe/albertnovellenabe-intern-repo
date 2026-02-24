@@ -28,7 +28,7 @@ The `LoggerErrorInterceptor` (commonly used with packages like `nestjs-pino`) in
 
 ### Logger Interceptor
 
-![CODE_2](nestjs-interceptors-middleware_7_3_loggerinterceptor.png)
+![CODE_2](nestjs-interceptors-middleware_7_3_logginginterceptor.png)
 
 ### Updated main.ts
 
