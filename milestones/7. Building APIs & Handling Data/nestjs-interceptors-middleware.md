@@ -24,16 +24,16 @@ The `LoggerErrorInterceptor` (commonly used with packages like `nestjs-pino`) in
 
 ### Logger Middleware
 
-![CODE_1]{nestjs-interceptors-middleware_7_3_loggermiddleware.png)
+![CODE_1](nestjs-interceptors-middleware_7_3_loggermiddleware.png)
 
 ### Logger Interceptor
 
-![CODE_2]{nestjs-interceptors-middleware_7_3_loggerinterceptor.png)
+![CODE_2](nestjs-interceptors-middleware_7_3_loggerinterceptor.png)
 
 ### Updated main.ts
 
-![CODE_3]{nestjs-interceptors-middleware_7_3_updated_main.png)
+![CODE_3](nestjs-interceptors-middleware_7_3_updated_main.png)
 
 ### Updated app.module.ts
 
-![CODE_4]{nestjs-interceptors-middleware_7_3_appmodule.png)
+![CODE_4](nestjs-interceptors-middleware_7_3_appmodule.png)
