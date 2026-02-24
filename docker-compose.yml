@@ -16,6 +16,7 @@ services:
       - /usr/src/app/node_modules # Prevents local node_modules from overwriting the container's
     depends_on:
       - db # Ensures the database starts before the API
+      - redis
 
   db:
     image: postgres:16 # Use a specific version to match production
@@ -29,6 +30,15 @@ services:
       - "5432:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data # This is where the magic (persistence) happens
+  redis:
+    image: redis:7-alpine
+    container_name: focusbear-redis
+    ports:
+      - "6380:6379" # Exposes Redis to your host machine for debugging
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
 
 volumes:
   pgdata: # Declares the named volume
+  redis_data:
