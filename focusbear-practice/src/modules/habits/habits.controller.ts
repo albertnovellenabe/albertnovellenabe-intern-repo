@@ -16,7 +16,7 @@ export class HabitsController {
   constructor(private readonly habitsService: HabitsService) {}
 
   @Get()
-  getAllHabits(): Habit[] {
+  async getAllHabits(): Promise<Habit[]> {
     return this.habitsService.findAll();
   }
 

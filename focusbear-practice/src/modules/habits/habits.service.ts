@@ -1,4 +1,6 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
 
 export class Habit {
   id: string;
@@ -8,10 +10,19 @@ export class Habit {
 
 @Injectable()
 export class HabitsService {
+  constructor(
+    @InjectRepository(Habit)
+    private habitsRepository: Repository<Habit>,
+  ) {}
   private habits: Habit[] = [];
 
+  /*
   findAll(): Habit[] {
     return this.habits;
+  }*/
+  async findAll(): Promise<Habit[]> {
+    // Directly queries: SELECT * FROM habits;
+    return this.habitsRepository.find();
   }
 
   findOne(id: string): Habit {
