@@ -29,7 +29,7 @@ Restricting access requires a three-step process:
     
 ### Auth0 Setup
 
-![CODE_1](nestjs-rbac_8_1_auth0_setup.png)
+![CODE_1](nestjs-rbac_8_1_auth0_code.png)
 
 ### Auth0 Sample: admin-only-success
 
