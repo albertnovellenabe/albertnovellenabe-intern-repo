@@ -5,6 +5,7 @@ import { HabitsModule } from './modules/habits/habits.module';
 import { LoggerMiddleware } from './common/middleware/logger.middleware';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { LoggerModule } from 'nestjs-pino';
 import * as Joi from 'joi';
 
 @Module({
@@ -18,6 +19,16 @@ import * as Joi from 'joi';
         AUTH0_AUDIENCE: Joi.string().required(),
         PORT: Joi.number().default(3000),
       }),
+    }),
+    LoggerModule.forRoot({
+      pinoHttp: {
+        transport: {
+          target: 'pino-pretty',
+          options: {
+            singleLine: true,
+          },
+        },
+      },
     }),
     TypeOrmModule.forRoot({
       type: 'postgres',
