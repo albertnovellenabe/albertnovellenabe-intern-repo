@@ -18,6 +18,7 @@ import * as Joi from 'joi';
         AUTH0_ISSUER_URL: Joi.string().uri().required(),
         AUTH0_AUDIENCE: Joi.string().required(),
         PORT: Joi.number().default(3000),
+        DB_ENCRYPTION_KEY: Joi.string().length(64).required(),
       }),
     }),
     LoggerModule.forRoot({

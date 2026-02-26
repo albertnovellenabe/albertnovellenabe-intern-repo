@@ -1,6 +1,7 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
+import { CreateHabitDto } from './dto/create-habit.dto';
 
 export class Habit {
   id: string;
@@ -33,6 +34,7 @@ export class HabitsService {
     return habit;
   }
 
+  /*
   create(name: string): Habit {
     const newHabit: Habit = {
       id: Date.now().toString(),
@@ -42,6 +44,12 @@ export class HabitsService {
     this.habits.push(newHabit);
 
     return newHabit;
+  }*/
+
+  async create(CreateHabitDto: CreateHabitDto) {
+    const newHabit = this.habitsRepository.create(CreateHabitDto);
+
+    return this.habitsRepository.save(newHabit);
   }
 
   update(id: string, isCompleted: boolean): Habit {

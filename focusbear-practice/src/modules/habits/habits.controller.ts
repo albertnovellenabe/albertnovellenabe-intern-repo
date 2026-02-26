@@ -33,7 +33,8 @@ export class HabitsController {
 
   @Post()
   createHabit(@Body() CreateHabitDto: CreateHabitDto) {
-    return this.habitsService.create(CreateHabitDto.name);
+    // return this.habitsService.create(CreateHabitDto.name);
+    return this.habitsService.create(CreateHabitDto);
   }
 
   @Put(':id')

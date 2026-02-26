@@ -1,6 +1,10 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { EncryptionTransformer } from 'typeorm-encrypted';
+import * as dotenv from 'dotenv';
 
-@Entity('habits') // Matches the table name in Postgres
+dotenv.config();
+
+@Entity('habits')
 export class Habit {
   @PrimaryGeneratedColumn()
   id: number;
@@ -10,4 +14,15 @@ export class Habit {
 
   @Column({ name: 'is_completed', default: false })
   isCompleted: boolean;
+
+  @Column({
+    type: 'text',
+    nullable: true,
+    transformer: new EncryptionTransformer({
+      key: process.env.DB_ENCRYPTION_KEY as string,
+      algorithm: 'aes-256-cbc',
+      ivLength: 16,
+    }),
+  })
+  privateNotes: string;
 }

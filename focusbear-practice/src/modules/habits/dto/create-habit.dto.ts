@@ -4,8 +4,13 @@ export class CreateHabitDto {
   @IsString()
   @IsNotEmpty()
   name: string;
-
+  /*
   @IsBoolean()
   @IsOptional()
   isCompleted?: boolean;
+  */
+
+  @IsString()
+  @IsOptional()
+  privateNotes?: string;
 }
