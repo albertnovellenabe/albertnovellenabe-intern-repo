@@ -24,4 +24,4 @@ NestJS provides a standalone testing module that mimics the framework's actual r
 
 ### Jest Sample Test Output
 
-![OUTPUT](nestjs-testing-intro_9_5_jestsuccessoutput.png)
+![OUTPUT](nestjs-testing-intro_9_5_jestsuccessouput.png)
