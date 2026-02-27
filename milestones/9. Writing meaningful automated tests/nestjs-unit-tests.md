@@ -31,4 +31,4 @@ You must test beyond the "Happy Path" (where everything goes perfectly). You ens
 
 ### Jest Sample Test Coverage
 
-![OUTPUT](nestjs-unit-tests_9_6_test:cov.png)
+![OUTPUT](nestjs-unit-tests_9_6_test_cov.png)
