@@ -19,9 +19,9 @@
 
 ![OUTPUT](unit_tests_9_2_jestsuccessoutput.png)
 
-### Jest Sample Test Program
+### Jest Sample Test Code
 
-![OUTPUT](unit_tests_9_2_sampletestprogram.png)
+![OUTPUT](unit_tests_9_2_sampletestcode.png)
 
 ## 9.4 Introduction to Unit Testing with Jest
 
@@ -37,6 +37,10 @@
 The actual testing logic (`expect(result).toBe(12)`) is straightforward, but setting up the testing environment itself was highly challenging. 
 Because the project uses Vite, which relies entirely on modern ES Modules (`import/export`), integrating it with Jest (which historically defaults to CommonJS and `require`) caused massive configuration conflicts. I had to explicitly configure Node.js to use `--experimental-vm-modules` and manually override `ts-jest` to use `ESNext` modules just to get the tests to run. Furthermore, mocking browser APIs like `fetch` required manually injecting dummy functions into `globalThis`, as Jest's internal `jsdom` environment does not natively support them.
 
-### Jest Sample Output
+### Jest Sample Test Output
 
-![OUTPUT](unit_tests_9_4_sampleoutput.png)
+![OUTPUT](unit_tests_9_4_jestsuccessoutput.png)
+
+### Jest Sample Test Code
+
+![OUTPUT](unit_tests_9_4_sampletestcode.png)
