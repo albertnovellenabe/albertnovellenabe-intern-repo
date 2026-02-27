@@ -17,8 +17,26 @@
 
 ### Jest Sample Test Output
 
-![OUTPUT](unit_test_9_2_jestsuccessoutput.png)
+![OUTPUT](unit_tests_9_2_jestsuccessoutput.png)
 
 ### Jest Sample Test Program
 
-![OUTPUT](unit_test_9_2_sampletestprogram.png)
+![OUTPUT](unit_tests_9_2_sampletestprogram.png)
+
+## 9.4 Introduction to Unit Testing with Jest
+
+### Why is automated testing important in software development?
+
+1. **Prevents Regressions:** As Focus Bear grows, modifying one feature can accidentally break another. Automated tests act as a safety net, instantly alerting developers if their new code breaks existing functionality.
+2. **Refactoring Confidence:** Developers can rewrite and optimize messy code without fear. If the tests still pass, the optimization is safe.
+3. **Living Documentation:** Tests explicitly show how a component or function is *supposed* to be used, acting as up-to-date documentation for new engineers joining the team.
+4. **Forces Better Architecture:** Code that is difficult to test is usually poorly written (e.g., too tightly coupled). Writing tests forces developers to build modular, single-purpose functions.
+
+### What did you find challenging when writing your first Jest test?
+
+The actual testing logic (`expect(result).toBe(12)`) is straightforward, but setting up the testing environment itself was highly challenging. 
+Because the project uses Vite, which relies entirely on modern ES Modules (`import/export`), integrating it with Jest (which historically defaults to CommonJS and `require`) caused massive configuration conflicts. I had to explicitly configure Node.js to use `--experimental-vm-modules` and manually override `ts-jest` to use `ESNext` modules just to get the tests to run. Furthermore, mocking browser APIs like `fetch` required manually injecting dummy functions into `globalThis`, as Jest's internal `jsdom` environment does not natively support them.
+
+### Jest Sample Output
+
+![OUTPUT](unit_tests_9_4_sampleoutput.png)
