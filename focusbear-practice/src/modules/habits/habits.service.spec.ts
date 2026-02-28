@@ -52,4 +52,13 @@ describe('HabitsService', () => {
       privateNotes: 'Testing encryption',
     });
   });
+
+  it('should return an array of habits (Strong Assertion)', async () => {
+    // Act: Call the service
+    const result = await service.findAll();
+
+    // Assert: Verify the database was called AND the data is exactly what we expect
+    expect(mockHabitsRepository.find).toHaveBeenCalledTimes(1);
+    expect(result).toEqual([{ id: 1, name: 'Morning Walk' }]);
+  });
 });
