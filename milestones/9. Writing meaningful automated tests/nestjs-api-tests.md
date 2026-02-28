@@ -25,8 +25,8 @@ For example, under `describe('POST /habits')`:
 
 ### Jest Sample Test Output
 
-![OUTPUT](nestjs-unit-tests_9_8_jestsuccessoutput.png)
+![OUTPUT](nestjs-api-tests_9_8_jestsuccessoutput.png)
 
 ### Jest Sample Test Code
 
-![OUTPUT](nestjs-unit-tests_9_8_sampletestcode.png)
+![OUTPUT](nestjs-api-tests_9_8_sampletestcode.png)
